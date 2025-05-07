@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aburbanoExamen.Views.vRegistro"
+             Title="vRegistro">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="lblUsuarioCon"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+     x:Name="lblRegistro"
+            Text="REGISTRO"
+            TextColor="Blue"
+            FontSize="22"
+     VerticalOptions="Center" 
+     HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"  Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingresar Nombre"  Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Apellido"  Grid.Row="0" Grid.Column="2"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingresar Apellido"  Grid.Row="1" Grid.Column="2"/>
+            <Label Text="Apellido"  Grid.Row="0" Grid.Column="3"/>
+            <Picker x:Name="pcIva" Title="Seleccionar VA"  Grid.Row="1" Grid.Column="3">
+                <Picker.Items>
+
+                </Picker.Items>
+            </Picker> 
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Fecha:"  Grid.Row="0" Grid.Column="0"/>
+            <DatePicker x:Name="dpfecha" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Ciudad:"  Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="pcCiudad" Title="Seleccionar Ciudad"  Grid.Row="1" Grid.Column="1">
+                <Picker.Items>
+
+                </Picker.Items>
+            </Picker>
+            <Label Text="Monto Inicial:"  Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtMontoInicial" Placeholder="Ingresar Monto Inicial"  Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="btnCalcular" Text="Calcular Pago mensual" Grid.Row="3" Grid.Column="0" Clicked="btnCalcular_Clicked"/>
+            <Entry x:Name="txtCuotamensual" Placeholder="Ingresar Cuota mensual"  Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+        <Button x:Name="btnVerResumen" Text="Ver Resumen" Clicked="btnVerResumen_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

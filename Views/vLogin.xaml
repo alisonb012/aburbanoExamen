@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aburbanoExamen.Views.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="25">
+        <Label 
+            Text="Inicio Sesion"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            TextColor="Red"
+            />
+        <Image Source="logo.jpg" HeightRequest="200" />
+       
+
+            <Label Text="Usuario" TextColor="Red" />
+            
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese usuario"/>
+            <Label Text="Contraseña" TextColor="Red" />
+        
+        <Entry x:Name="txtContraseña" Placeholder="Ingrese contraseña" />
+       
+
+        <Button x:Name="btnIniciarSesion" Text="Iniciar sesión" Grid.Row="2" Grid.Column="0" Clicked="btnIniciarSesion_Clicked"/>
+        <Button x:Name="btnAcerca" Text="Acerca de" Grid.Row="2" Grid.Column="1" Clicked="btnAcerca_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -4,10 +4,10 @@ namespace aburbanoExamen.Views;
 
 public partial class vRegistro : ContentPage
 {
-	public vRegistro(string usuario)
-	{
+    public vRegistro(string usuario)
+    {
         InitializeComponent();
-        lblUsuarioCon.Text = "Usuario conectado: " + usuario ;
+        lblUsuarioCon.Text = "Usuario conectado: " + usuario;
     }
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
@@ -25,10 +25,11 @@ public partial class vRegistro : ContentPage
         string Nombre = txtNombre.Text,
         Apellido = txtApellido.Text,
         VA = pcIva.SelectedIndex.ToString();
-        DateTime Fecha = dpfecha.Date.ToString();
+        DateTime Fecha = dpfecha.Date;
         string Ciudad = pcCiudad.SelectedIndex.ToString(),
         MontoInicial = txtMontoInicial.Text,
         CuotaMensual = txtCuotamensual.Text;
 
         await Navigation.PushAsync(new Views.vResumen(Nombre, Apellido, VA, Fecha, Ciudad, MontoInicial, CuotaMensual));
     }
+}

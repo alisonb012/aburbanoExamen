@@ -24,11 +24,11 @@ public partial class vRegistro : ContentPage
 
         string Nombre = txtNombre.Text,
         Apellido = txtApellido.Text,
-        VA = pcIva.SelectedIndex.ToString(),
-        Fecha = dpfecha.Date.ToString("yyyy-MM-dd"),
-        Ciudad = pcCiudad.SelectedIndex.ToString(),
+        VA = pcIva.SelectedIndex.ToString();
+        DateTime Fecha = dpfecha.Date.ToString();
+        string Ciudad = pcCiudad.SelectedIndex.ToString(),
         MontoInicial = txtMontoInicial.Text,
         CuotaMensual = txtCuotamensual.Text;
-        
-        await Navigation.PushAsync(Views.vResumen(Nombre, Apellido, Va, Fecha, Ciudad, MontoInicial, CuotaMensual));
+
+        await Navigation.PushAsync(new Views.vResumen(Nombre, Apellido, VA, Fecha, Ciudad, MontoInicial, CuotaMensual));
     }

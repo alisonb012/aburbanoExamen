@@ -47,7 +47,7 @@
             <Label Text="Pago Total:"  Grid.Row="7" Grid.Column="0"/>
             <Label x:Name="lblPagoTotal" Grid.Row="7" Grid.Column="1"/>
         </Grid>
-        <Button x:Name="btnCerrarSesion" Text="Cerrar sesión"/>
-        <Button x:Name="btnLogin" Text="Abrir Login"/>
+        <Button x:Name="btnCerrarSesion" Text="Cerrar sesión" Clicked="btnCerrarSesion_Clicked"/>
+        <Button x:Name="btnLogin" Text="Abrir Login" Clicked="btnLogin_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
